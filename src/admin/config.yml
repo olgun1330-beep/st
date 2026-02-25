@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  branch: main # GitHub'daki ana dalın adı
+  branch: main
 
-media_folder: "src/img" # Resimlerin yükleneceği yer
+media_folder: "src/img"
 public_folder: "/img"
 
 collections:
@@ -12,6 +12,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog-yazi-tasarimi.html" }
       - { label: "Başlık", name: "title", widget: "string" }
       - { label: "Yayın Tarihi", name: "date", widget: "datetime" }
       - { label: "Kapak Görseli", name: "image", widget: "image" }
